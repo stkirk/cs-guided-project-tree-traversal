@@ -49,16 +49,16 @@ def print_tree_preorder(root):
 # depth first, in order
 # vists nodes all the way down and to the left, then works way back up visiting right child nodes on the way
 # in BST would visit nodes from smallest value to largest value
-def print_tree_inorder(root):
+def print_tree_inorder(node):
     # if we have a left child node
-    if root.left:
-        print_tree_inorder(root.left)
+    if node.left:
+        print_tree_inorder(node.left)
 
-    print(root.value)
+    print(node.value)
 
     # if we have a left child node
-    if root.right:
-        print_tree_inorder(root.right)
+    if node.right:
+        print_tree_inorder(node.right)
 
 # depth first, postorder
 # travels down left branch and visits lowest child nodes first works back up left then goes down right visits lowest level child nodes works its way back up and visits ROOT LAST
@@ -102,7 +102,7 @@ def iterative_dft(root):
 
 '''
 Breadth First Search: iterative version of tree traversal
-Uses a queue instead of recursion(essentially uses a stack)
+Uses a queue instead of recursion(call stack)
 '''
 def breadth_first_traversal(root):
     queue = []
